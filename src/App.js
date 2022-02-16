@@ -40,6 +40,12 @@ function App() {
         setCalc(eval(calc).toString());
     }
 
+    const clear = (value) => {
+        setResult((value=''))
+        setCalc((value=''))
+        
+    }
+
     const deleteLast = () => {
         if (calc == ''){
             return;
@@ -64,6 +70,7 @@ function App() {
                 <button onClick={() => updateCalc('-')}>-</button>
 
                 <button onClick={deleteLast}>DEL</button>
+                <button onClick={clear}>AC</button>
             </div>
 
             <div className="digits">
